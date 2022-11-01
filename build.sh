@@ -14,4 +14,4 @@ docker run -it --rm -u 1000 \
     -v "$PWD":/usr/src/mymaven \
     -v "$PWD/.m2":/var/maven/.m2 \
     -w /usr/src/mymaven \
-    maven:3-openjdk-17 mvn -Duser.home=/var/maven clean package
+    maven:3-openjdk-11 mvn -Duser.home=/var/maven clean package

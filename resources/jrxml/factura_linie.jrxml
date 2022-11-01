@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="factura_linie" language="groovy" pageWidth="595" pageHeight="842" whenNoDataType="NoPages" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="18ab5737-fe91-44a9-b5c9-19b3036971bf">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<queryString language="xPath">
+		<![CDATA[/*[local-name()='Invoice']/*[local-name()='InvoiceLine']]]>
+	</queryString>
+	<field name="BT129" class="java.lang.String">
+		<fieldDescription><![CDATA[*[local-name()='InvoicedQuantity']]]></fieldDescription>
+	</field>
+	<field name="BT130" class="java.lang.String">
+		<fieldDescription><![CDATA[*[local-name()='InvoicedQuantity']/@*[local-name()='unitCode']]]></fieldDescription>
+	</field>
+	<field name="BT1311" class="java.lang.String">
+		<fieldDescription><![CDATA[*[local-name()='LineExtensionAmount']/@*[local-name()='currencyID']]]></fieldDescription>
+	</field>
+	<field name="BT131" class="java.lang.String">
+		<fieldDescription><![CDATA[*[local-name()='LineExtensionAmount']]]></fieldDescription>
+	</field>
+	<field name="BT153" class="java.lang.String">
+		<fieldDescription><![CDATA[*[local-name()='Item']/*[local-name()='Name']]]></fieldDescription>
+	</field>
+	<field name="BT154" class="java.lang.String">
+		<fieldDescription><![CDATA[*[local-name()='Item']/*[local-name()='Description']]]></fieldDescription>
+	</field>
+	<field name="BT159" class="java.lang.String">
+		<fieldDescription><![CDATA[*[local-name()='Item']/*[local-name()='OriginCountry']/*[local-name()='IdentificationCode']]]></fieldDescription>
+	</field>
+	<field name="BT151" class="java.lang.String">
+		<fieldDescription><![CDATA[*[local-name()='Item']/*[local-name()='ClassifiedTaxCategory']/*[local-name()='ID']]]></fieldDescription>
+	</field>
+	<field name="BT152" class="java.lang.String">
+		<fieldDescription><![CDATA[*[local-name()='Item']/*[local-name()='ClassifiedTaxCategory']/*[local-name()='Percent']]]></fieldDescription>
+	</field>
+	<field name="BT146" class="java.lang.String">
+		<fieldDescription><![CDATA[*[local-name()='Price']/*[local-name()='PriceAmount']]]></fieldDescription>
+	</field>
+	<field name="BT149" class="java.lang.String">
+		<fieldDescription><![CDATA[*[local-name()='Price']/*[local-name()='BaseQuantity']]]></fieldDescription>
+	</field>
+	<field name="BT126" class="java.lang.String">
+		<fieldDescription><![CDATA[*[local-name()='ID']]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="1" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="100" height="20" backcolor="#CCCCCC" uuid="649e6878-cbb3-4330-8382-e2461e23ed39"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<text><![CDATA[LINIA FACTURII:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Opaque" x="100" y="0" width="129" height="20" backcolor="#CCCCCC" uuid="a854bbbd-568d-4ec0-b983-6c6c70594e4f"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BT126}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="229" y="0" width="366" height="20" backcolor="#CCCCCC" uuid="ba435bf6-a6b6-4304-bf3a-96623a674980"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+		</band>
+		<band/>
+		<band height="119">
+			<staticText>
+				<reportElement x="410" y="0" width="52" height="74" uuid="1d45afe9-3bbe-4b21-9745-9c043c583fc2"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="true"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<text><![CDATA[Codul categoriei de TVA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="462" y="0" width="38" height="74" uuid="7d5c65f1-519c-455e-8f43-8471ae8b36fc"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="true"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<text><![CDATA[Cota de TVA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="131" y="0" width="65" height="74" uuid="71a867e6-6822-4e07-abda-912a62807174"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="true"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<text><![CDATA[Pretul net al articolului]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="241" y="0" width="77" height="74" uuid="bfe81128-b0ea-49de-b2a5-c4a6d458c96b"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="true"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<text><![CDATA[Cantitatea de baza a pretului articolului]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="318" y="0" width="48" height="74" uuid="f37534f0-8415-417b-9874-0f104a90ce2f"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="true"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<text><![CDATA[Cantitate facturata]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="366" y="0" width="44" height="74" uuid="e8961bc4-a22c-487b-b263-1060afb3b680"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="true"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<text><![CDATA[UM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="500" y="0" width="64" height="74" uuid="6ad34d7f-e4a7-40c8-b04d-4da3334367ec"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="true"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<text><![CDATA[Valoarea neta a liniei]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="196" y="0" width="45" height="74" uuid="101138bf-f78f-464b-9f09-68aa491be0d0"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="true"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<text><![CDATA[Codul monedei ]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="131" y="74" width="65" height="35" uuid="e13842da-c6d7-41b4-aac3-0a05a5fdfa92"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="false"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BT146}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="196" y="74" width="45" height="35" uuid="4d860832-e3e2-48c7-a2c2-696dcc46399f"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="false"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BT1311}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="241" y="74" width="77" height="35" uuid="f809423e-6fd0-4a2e-b9db-2f8715f8c6d7"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="false"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BT149}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="318" y="74" width="48" height="35" uuid="a9e1afd7-0186-4b4b-a50a-5ca65c41191f"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="false"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BT129}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="366" y="74" width="44" height="35" uuid="2ebb3fb8-dbfa-4160-a9b4-42486f9569b3"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="false"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BT130}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="410" y="74" width="52" height="35" uuid="7f896198-216e-439d-95b5-ce7e346ffce1"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="false"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BT151}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="462" y="74" width="38" height="35" uuid="47b64bdc-31e9-43d1-bfe3-5d0f95093f32"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="false"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BT152}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="500" y="74" width="64" height="35" uuid="c2160e92-3ee6-479a-bb3d-ebf4525bb493"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="false"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BT131}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="131" height="74" uuid="d1c38430-1b57-406d-97ce-f9e2eaa57ad7"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="true"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<text><![CDATA[Nume articol]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="74" width="131" height="35" uuid="5120a245-c6f0-4a36-89df-da6bebbff27d"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="false"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BT153}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="43">
+			<staticText>
+				<reportElement x="0" y="0" width="207" height="20" uuid="ff717817-1617-46f5-95aa-1ec3aa8ef077"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="false"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<text><![CDATA[Informatii suplimentare]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="20" width="207" height="20" isRemoveLineWhenBlank="true" uuid="2456e21a-3eef-4752-98bf-ca5199f3476e"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="true"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<text><![CDATA[Descriere articol]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="207" y="20" width="357" height="20" isRemoveLineWhenBlank="true" uuid="8e6093af-9cde-4c84-8c0d-935fb2b8d066"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="false"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BT154}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="23">
+			<staticText>
+				<reportElement x="0" y="0" width="207" height="20" isRemoveLineWhenBlank="true" uuid="22359ba3-854d-459f-8a9d-fa26ae90bfec"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="true"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<text><![CDATA[Tara de origine a articolului]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="207" y="0" width="357" height="20" isRemoveLineWhenBlank="true" uuid="7269f2b7-ae01-41de-be9e-64efbb895ce6"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="false"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BT159}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="3"/>
+		<band height="12">
+			<subreport isUsingCache="true">
+				<reportElement positionType="Float" x="0" y="2" width="552" height="10" isRemoveLineWhenBlank="true" uuid="32e29e71-f47e-4e14-a8b3-a80df8e752ca"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)
+$P{REPORT_DATA_SOURCE}).subDataSource("//*[local-name()='InvoiceLine']/*[local-name()='Note']")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "//factura_lnota.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band/>
+		<band height="12">
+			<subreport isUsingCache="true">
+				<reportElement positionType="Float" x="0" y="2" width="552" height="10" isRemoveLineWhenBlank="true" uuid="fe3082f6-5442-49df-9f94-b4fc60a6c483"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)
+$P{REPORT_DATA_SOURCE}).subDataSource("//*[local-name()='InvoiceLine']/*[local-name()='AccountingCost']")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "//factura_lrefcontabila.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="14">
+			<subreport isUsingCache="true">
+				<reportElement positionType="Float" x="0" y="2" width="552" height="10" isRemoveLineWhenBlank="true" uuid="b943fa99-37e6-41fc-b583-e59df30abd4e"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)
+$P{REPORT_DATA_SOURCE}).subDataSource("//*[local-name()='InvoiceLine']/*[local-name()='InvoicePeriod']")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "//factura_lperioada.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band/>
+		<band/>
+		<band height="11">
+			<subreport isUsingCache="true">
+				<reportElement positionType="Float" x="0" y="0" width="552" height="10" isRemoveLineWhenBlank="true" uuid="02403bf0-a5d1-408b-988c-405178871684"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)
+$P{REPORT_DATA_SOURCE}).subDataSource("//*[local-name()='InvoiceLine']/*[local-name()='OrderLineReference']")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "//factura_lorderref.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="11">
+			<subreport isUsingCache="true">
+				<reportElement positionType="Float" x="0" y="0" width="552" height="10" isRemoveLineWhenBlank="true" uuid="9765090e-f836-4063-b5bd-497e15d151c5"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)
+$P{REPORT_DATA_SOURCE}).subDataSource("//*[local-name()='InvoiceLine']/*[local-name()='DocumentReference']")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "//factura_ldocref.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="13">
+			<subreport isUsingCache="true">
+				<reportElement positionType="Float" x="0" y="1" width="552" height="10" isRemoveLineWhenBlank="true" uuid="a32f0ae4-6e09-4d24-9c76-05cf95ff5e5b"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)
+$P{REPORT_DATA_SOURCE}).subDataSource("//*[local-name()='InvoiceLine']/*[local-name()='Item']/*[local-name()='SellersItemIdentification']")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "//factura_lrefv.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="13">
+			<subreport isUsingCache="true">
+				<reportElement positionType="Float" x="0" y="2" width="552" height="10" isRemoveLineWhenBlank="true" uuid="fa202f2a-b3d9-4e4d-aa6f-52ae056601d0"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)
+$P{REPORT_DATA_SOURCE}).subDataSource("//*[local-name()='InvoiceLine']/*[local-name()='Item']/*[local-name()='BuyersItemIdentification']")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "//factura_lrefc.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="15">
+			<subreport isUsingCache="true">
+				<reportElement positionType="Float" x="0" y="2" width="552" height="10" isRemoveLineWhenBlank="true" uuid="0bf8d9a5-c8fc-4727-8f8f-9d3c7c236b1a"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)
+$P{REPORT_DATA_SOURCE}).subDataSource("//*[local-name()='InvoiceLine']/*[local-name()='Item']/*[local-name()='StandardItemIdentification']")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "//factura_lrefitem.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="11">
+			<subreport isUsingCache="true">
+				<reportElement positionType="Float" x="0" y="1" width="552" height="10" isRemoveLineWhenBlank="true" uuid="fa8b21a7-8fa2-4165-813d-efa6d071b2a8"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)
+$P{REPORT_DATA_SOURCE}).subDataSource("//*[local-name()='InvoiceLine']/*[local-name()='Item']/*[local-name()='CommodityClassification']")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "//factura_lrefclassification.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="11">
+			<subreport isUsingCache="true">
+				<reportElement positionType="Float" x="0" y="1" width="552" height="10" isRemoveLineWhenBlank="true" uuid="0b67e441-de28-4925-bcf3-143b04737ca1"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)
+$P{REPORT_DATA_SOURCE}).subDataSource("//*[local-name()='InvoiceLine']/*[local-name()='Item']/*[local-name()='AdditionalItemProperty']")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "//factura_latributarticol.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="14">
+			<subreport isUsingCache="true">
+				<reportElement positionType="Float" x="0" y="1" width="552" height="10" isRemoveLineWhenBlank="true" uuid="10359558-a0ab-4736-b9ef-f31464cad23c"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)
+$P{REPORT_DATA_SOURCE}).subDataSource("//*[local-name()='InvoiceLine']/*[local-name()='AllowanceCharge']")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "//factura_lallowancecharge.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="15">
+			<subreport isUsingCache="true">
+				<reportElement positionType="Float" x="0" y="0" width="552" height="10" isRemoveLineWhenBlank="true" uuid="91f0b656-fb29-42ce-b02a-3254110f633d"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)
+$P{REPORT_DATA_SOURCE}).subDataSource("//*[local-name()='InvoiceLine']/*[local-name()='Price']/*[local-name()='AllowanceCharge']")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "//factura_lallowancechargearticol.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+</jasperReport>

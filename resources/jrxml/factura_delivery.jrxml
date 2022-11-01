@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="factura_delivery" language="groovy" pageWidth="595" pageHeight="842" whenNoDataType="NoPages" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="75a7f5c2-f0df-4e57-96c1-e6ea488652bc">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<queryString language="xPath">
+		<![CDATA[/*[local-name()='Invoice']/*[local-name()='Delivery']]]>
+	</queryString>
+	<field name="BT72" class="java.lang.String">
+		<fieldDescription><![CDATA[/*[local-name()='Invoice']/*[local-name()='Delivery']/*[local-name()='ActualDeliveryDate']]]></fieldDescription>
+	</field>
+	<field name="BT75" class="java.lang.String">
+		<fieldDescription><![CDATA[/*[local-name()='Invoice']/*[local-name()='Delivery']/*[local-name()='DeliveryLocation']/*[local-name()='Address']/*[local-name()='StreetName']]]></fieldDescription>
+	</field>
+	<field name="BT76" class="java.lang.String">
+		<fieldDescription><![CDATA[/*[local-name()='Invoice']/*[local-name()='Delivery']/*[local-name()='DeliveryLocation']/*[local-name()='Address']/*[local-name()='AdditionalStreetName']]]></fieldDescription>
+	</field>
+	<field name="BT77" class="java.lang.String">
+		<fieldDescription><![CDATA[/*[local-name()='Invoice']/*[local-name()='Delivery']/*[local-name()='DeliveryLocation']/*[local-name()='Address']/*[local-name()='CityName']]]></fieldDescription>
+	</field>
+	<field name="BT78" class="java.lang.String">
+		<fieldDescription><![CDATA[/*[local-name()='Invoice']/*[local-name()='Delivery']/*[local-name()='DeliveryLocation']/*[local-name()='Address']/*[local-name()='PostalZone']]]></fieldDescription>
+	</field>
+	<field name="BT79" class="java.lang.String">
+		<fieldDescription><![CDATA[/*[local-name()='Invoice']/*[local-name()='Delivery']/*[local-name()='DeliveryLocation']/*[local-name()='Address']/*[local-name()='CountrySubentity']]]></fieldDescription>
+	</field>
+	<field name="BT80" class="java.lang.String">
+		<fieldDescription><![CDATA[/*[local-name()='Invoice']/*[local-name()='Delivery']/*[local-name()='DeliveryLocation']/*[local-name()='Address']/*[local-name()='Country']/*[local-name()='IdentificationCode']]]></fieldDescription>
+	</field>
+	<field name="BT71" class="java.lang.String">
+		<fieldDescription><![CDATA[/*[local-name()='Invoice']/*[local-name()='Delivery']/*[local-name()='DeliveryLocation']/*[local-name()='ID']]]></fieldDescription>
+	</field>
+	<field name="BT711" class="java.lang.String">
+		<fieldDescription><![CDATA[/*[local-name()='Invoice']/*[local-name()='Delivery']/*[local-name()='DeliveryLocation']/*[local-name()='ID']/@*[local-name()='schemeID']]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="1" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="46" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="595" height="25" backcolor="#CCCCCC" uuid="2e704408-b18b-4cd5-8b4c-f9f501b27202"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<text><![CDATA[INFORMATII REFERITOARE LA LIVRARE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="25" width="207" height="20" uuid="99594d03-7807-4e73-ac84-a7ab455fdf4a"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="true"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<text><![CDATA[Data reala a livrarii]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="207" y="25" width="269" height="20" uuid="61e3d1b4-ed04-4718-af20-9707f3f2776c"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="false"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BT72}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band/>
+		<band height="11">
+			<subreport isUsingCache="true">
+				<reportElement positionType="Float" x="0" y="0" width="552" height="10" isRemoveLineWhenBlank="true" uuid="442faf39-9b65-4319-8809-e54a7d1275cb"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)
+$P{REPORT_DATA_SOURCE}).subDataSource("//*[local-name()='Delivery']/*[local-name()='DeliveryParty']/*[local-name()='PartyName']")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "//factura_dpartyname.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="45">
+			<staticText>
+				<reportElement x="0" y="0" width="207" height="25" uuid="e7a9acd5-3403-4534-8688-8245e2b01c05"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12" isBold="false"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<text><![CDATA[Adresa livrare]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="25" width="185" height="20" uuid="e9574525-abff-49de-b81c-7b98f4209e9b"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="true"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<text><![CDATA[Identificatorul locului]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="185" y="25" width="269" height="20" uuid="5ffa29d8-435c-4440-b29a-d0a7b690e26b"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="false"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BT71}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="20">
+			<staticText>
+				<reportElement x="0" y="0" width="185" height="20" uuid="bf1c61fa-10e9-439c-9d03-666f3766fe48"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="true"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<text><![CDATA[Identificatorul schemei]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="185" y="0" width="269" height="20" uuid="c7cb8863-2154-4c17-a8e5-105f661ea282"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="false"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BT711}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band/>
+		<band/>
+		<band/>
+		<band height="41">
+			<staticText>
+				<reportElement x="0" y="0" width="102" height="20" uuid="629c0865-1653-49ea-a83c-9b85716ee934"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="true"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<text><![CDATA[Strada]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="102" y="0" width="478" height="20" uuid="ac18e269-c28f-490e-b502-d9666a236c8a"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="false"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BT75}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="21" width="185" height="20" uuid="53280b63-e268-4067-8ee2-e7db22cdefe2"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="true"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<text><![CDATA[Informatii suplimentare strada]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="185" y="21" width="395" height="20" uuid="06369d15-26cb-427f-8a3d-2832de1577d3"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="false"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BT76}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="11">
+			<subreport isUsingCache="true">
+				<reportElement positionType="Float" x="0" y="0" width="552" height="10" isRemoveLineWhenBlank="true" uuid="2eb66cfe-ae6b-4ad0-a96c-b6a7b0b3b901"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)
+$P{REPORT_DATA_SOURCE}).subDataSource("//*[local-name()='Delivery']/*[local-name()='DeliveryLocation']/*[local-name()='Address']/*[local-name()='AddressLine']")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "//factura_daddressline.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="20">
+			<textField isBlankWhenNull="true">
+				<reportElement x="185" y="0" width="395" height="20" uuid="11d99c5f-b03b-41a0-8201-b792ca66b960"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="false"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BT77}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="185" height="20" uuid="c60286f0-104b-42a4-ad15-63b6d48958a6"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="true"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<text><![CDATA[Oras]]></text>
+			</staticText>
+		</band>
+		<band height="20">
+			<textField isBlankWhenNull="true">
+				<reportElement x="185" y="0" width="395" height="20" uuid="e59f34eb-5e5d-4e24-bf4e-4314a04396f8"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="false"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BT78}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="185" height="20" uuid="708413d2-a4d0-435a-9db8-00329be34b05"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="true"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<text><![CDATA[Cod Postal]]></text>
+			</staticText>
+		</band>
+		<band height="20">
+			<textField isBlankWhenNull="true">
+				<reportElement x="185" y="0" width="395" height="20" uuid="446455af-caff-4c2a-9cf3-b0d13a2c7c41"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="false"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BT79}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="185" height="20" uuid="4473d99f-e46b-48d9-8ffc-97c1200c2869"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="true"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<text><![CDATA[Subdiviziunea tarii]]></text>
+			</staticText>
+		</band>
+		<band height="20">
+			<textField isBlankWhenNull="true">
+				<reportElement x="185" y="0" width="395" height="20" uuid="65484da8-9757-4719-b610-18e71cacda06"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="false"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BT80}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="185" height="20" uuid="d1836952-4916-4362-bbf1-a2ba06674f67"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="true"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<text><![CDATA[Tara]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

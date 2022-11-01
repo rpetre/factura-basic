@@ -35,9 +35,9 @@ public class Factura {
             final Map<String, Object> parameters = new HashMap<String, Object>();
             final Document document = JRXmlUtils.parse(JRLoader.getLocationInputStream(xmlFile.getAbsolutePath()));
             parameters.put("XML_DATA_DOCUMENT", document);
-            parameters.put("SUBREPORT_DIR", this.rootPath + "/jasper//");
+            parameters.put("SUBREPORT_DIR", this.rootPath + "/jasper");
             final String numePdf = this.rootPath + "/output.pdf";
-            final JasperPrint jasperPrint = JasperFillManager.fillReport(this.rootPath + "/jasper//factura_complet2.jasper", parameters);
+            final JasperPrint jasperPrint = JasperFillManager.fillReport(this.rootPath + "/jasper/factura.jasper", parameters);
             JasperExportManager.exportReportToPdfFile(jasperPrint, numePdf);
             return numePdf;
         }

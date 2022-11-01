@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="factura_paymentmeans" language="groovy" pageWidth="595" pageHeight="842" whenNoDataType="NoPages" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="f612d641-f9c8-43f1-99bd-f54f4a7a5d9a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<queryString language="xPath">
+		<![CDATA[/*[local-name()='Invoice']/*[local-name()='PaymentMeans']]]>
+	</queryString>
+	<field name="BT81" class="java.lang.String">
+		<fieldDescription><![CDATA[/*[local-name()='Invoice']/*[local-name()='PaymentMeans']/*[local-name()='PaymentMeansCode']]]></fieldDescription>
+	</field>
+	<field name="BT83" class="java.lang.String">
+		<fieldDescription><![CDATA[/*[local-name()='Invoice']/*[local-name()='PaymentMeans']/*[local-name()='PaymentID']]]></fieldDescription>
+	</field>
+	<field name="BT82" class="java.lang.String">
+		<fieldDescription><![CDATA[/*[local-name()='Invoice']/*[local-name()='PaymentMeans']/*[local-name()='InstructionNote']]]></fieldDescription>
+	</field>
+	<field name="BT87" class="java.lang.String">
+		<fieldDescription><![CDATA[/*[local-name()='Invoice']/*[local-name()='PaymentMeans']/*[local-name()='CardAccount']/*[local-name()='PrimaryAccountNumberID']]]></fieldDescription>
+	</field>
+	<field name="BT88" class="java.lang.String">
+		<fieldDescription><![CDATA[/*[local-name()='Invoice']/*[local-name()='PaymentMeans']/*[local-name()='CardAccount']/*[local-name()='HolderName']]]></fieldDescription>
+	</field>
+	<field name="BT91" class="java.lang.String">
+		<fieldDescription><![CDATA[/*[local-name()='Invoice']/*[local-name()='PaymentMeans']/*[local-name()='PaymentMandate']/*[local-name()='PayerFinancialAccount']/*[local-name()='ID']]]></fieldDescription>
+	</field>
+	<field name="BT89" class="java.lang.String">
+		<fieldDescription><![CDATA[/*[local-name()='Invoice']/*[local-name()='PaymentMeans']/*[local-name()='PaymentMandate']/*[local-name()='ID']]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="1" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="41" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="595" height="20" backcolor="#CCCCCC" uuid="34502cf8-b59e-4e0e-8fb0-b7a755f89530"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<text><![CDATA[INSTRUCTIUNI DE PLATA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="20" width="283" height="20" uuid="46e2686e-f772-4e04-b059-029b2e4547f8"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="true"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<text><![CDATA[Codul tipului instrumentului de plata]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="283" y="20" width="269" height="20" uuid="4eba95b5-80ca-4bf3-b8da-f31cb6e45447"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="false"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BT81}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band/>
+		<band height="21">
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="283" height="20" uuid="d4f67765-230e-4fa4-8779-8f468067369e"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="true"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<text><![CDATA[Nota privind instrumentul de plata]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="283" y="0" width="269" height="20" uuid="3c06462d-e999-4d9b-8bef-63ade0557cf8"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="false"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BT82}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="20">
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="283" y="0" width="269" height="20" uuid="719d34da-5d4d-4fc6-84b7-b270f3a7f488"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="false"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BT83}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="283" height="20" uuid="67250e83-b19c-4029-9d43-d5ed0dd0121d"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="true"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<text><![CDATA[Aviz de plata]]></text>
+			</staticText>
+		</band>
+		<band/>
+		<band/>
+		<band/>
+		<band/>
+		<band height="21">
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="283" height="20" uuid="cdb3e735-ba9e-4a0c-a507-39ed1d402df2"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="true"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<text><![CDATA[Numarul contului principal al cardului de plata]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="283" y="0" width="269" height="20" uuid="e18e36c8-bc33-4ee9-aeb4-4b41ae943253"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="false"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BT87}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="20">
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="283" y="0" width="269" height="20" uuid="381eb21f-23de-4998-b589-4be6cd57fa37"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="false"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BT88}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="283" height="20" uuid="f423ed3d-6209-4da4-a599-8dae339ecd9c"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="true"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<text><![CDATA[Numele detinatorului cardului de plata]]></text>
+			</staticText>
+		</band>
+		<band height="10">
+			<subreport isUsingCache="true">
+				<reportElement positionType="Float" x="0" y="0" width="552" height="10" isRemoveLineWhenBlank="true" uuid="02625943-d9d0-4aca-8afe-a6535175a4f5"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)
+$P{REPORT_DATA_SOURCE}).subDataSource("//*[local-name()='PaymentMeans']/*[local-name()='PaymentMeansCode']/*[local-name()='name']")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "//factura_explicatii.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="11">
+			<subreport isUsingCache="true">
+				<reportElement positionType="Float" x="0" y="0" width="552" height="10" isRemoveLineWhenBlank="true" uuid="9e11c578-2fed-42f1-8b5d-8068d9dc4660"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)
+$P{REPORT_DATA_SOURCE}).subDataSource("//*[local-name()='PaymentMeans']/*[local-name()='PayeeFinancialAccount']")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "//factura_cont.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="40">
+			<staticText>
+				<reportElement x="0" y="0" width="207" height="20" uuid="d8541842-6822-4eda-99ce-6bf4a7569578"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="true"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<text><![CDATA[Debitare directa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="20" width="283" height="20" uuid="101021c1-e1f1-4f56-8082-033e81ebddae"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="true"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<text><![CDATA[Identificatorul referintei mandatului]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="283" y="20" width="269" height="20" uuid="8da25377-4afb-4f58-9dff-98e95848f473"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="false"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BT89}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="22">
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="283" height="20" uuid="a16dc441-8303-460b-bf7b-f768111bc57f"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="true"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<text><![CDATA[Identificatorul contului debitat]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="283" y="0" width="269" height="20" uuid="044fd357-bd88-4e0c-89fd-b9967ebdb0ab"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="false"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BT91}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="factura_lallowancecharge" language="groovy" pageWidth="595" pageHeight="842" whenNoDataType="NoPages" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="d6b2e5a2-0a62-4283-9545-1904bb6757f5">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<queryString language="xPath">
+		<![CDATA[/*[local-name()='InvoiceLine']/*[local-name()='AllowanceCharge']]]>
+	</queryString>
+	<field name="BT1" class="java.lang.String">
+		<fieldDescription><![CDATA[*[local-name()='ChargeIndicator']]]></fieldDescription>
+	</field>
+	<field name="BT140" class="java.lang.String">
+		<fieldDescription><![CDATA[*[local-name()='AllowanceChargeReasonCode']]]></fieldDescription>
+	</field>
+	<field name="BT138" class="java.lang.String">
+		<fieldDescription><![CDATA[*[local-name()='MultiplierFactorNumeric']]]></fieldDescription>
+	</field>
+	<field name="BT136" class="java.lang.String">
+		<fieldDescription><![CDATA[*[local-name()='Amount']]]></fieldDescription>
+	</field>
+	<field name="BT137" class="java.lang.String">
+		<fieldDescription><![CDATA[*[local-name()='BaseAmount']]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="1" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="101" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="60" width="325" height="20" uuid="5c9aff98-72ec-451f-bfa0-4c1f45e6554c"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="false" isStrikeThrough="false"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<text><![CDATA[Valoarea deducerii/taxei suplimentare]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="80" width="324" height="20" uuid="e9e630ab-2c82-4883-b913-7e20a450d608"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="false"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<text><![CDATA[Valoarea de baza a deducerii/taxei suplimentare]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="325" y="20" width="255" height="20" uuid="7455eb04-d78f-42a5-9fbe-4fae7d074451"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="false"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BT140}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="325" y="40" width="256" height="20" uuid="8ee5f4d6-0cb0-4d43-a893-e414bbca8e79"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="false"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BT138}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="20" width="325" height="20" uuid="a3d1da1d-c479-4a57-b49a-b1ab9a8a7627"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="false"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<text><![CDATA[Codul motivului deducerii/taxei suplimentare]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="325" y="60" width="256" height="20" uuid="4b5dbbe2-4db9-4a13-a294-7c38b259bc34"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="false"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BT136}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="40" width="325" height="20" uuid="ccac88d9-df33-4e2f-aa9f-7705346aa441"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="false"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<text><![CDATA[Procentajul deducerii/taxei suplimentare]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="325" y="80" width="256" height="20" uuid="dd44af02-dd8a-4e34-9502-2e35a404f44d"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="false"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BT137}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Opaque" x="1" y="0" width="594" height="20" backcolor="#FFFFFF" uuid="723e7dfa-5502-44a9-9b3f-0455c761fc6b"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="false"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BT1}.compareTo("true")==0?"TAXA SUPLIMENTARA":($F{BT1}.compareTo("TRUE")==0?"TAXA SUPLIMENTARA":"DEDUCERE")]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="11">
+			<subreport isUsingCache="true">
+				<reportElement positionType="Float" x="0" y="0" width="552" height="10" uuid="0db120d8-7f23-4217-bc1a-a30161146490"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)
+$P{REPORT_DATA_SOURCE}).subDataSource("//*[local-name()='AllowanceCharge']/*[local-name()='AllowanceChargeReason']")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "//factura_ldeduceremotiv.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+</jasperReport>
